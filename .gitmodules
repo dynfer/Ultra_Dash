@@ -1,16 +1,16 @@
 [submodule "ChibiOS"]
 	path = ChibiOS
-	url = https://github.com/ChibiOS/ChibiOS
+	url = https://github.com/ChibiOS/ChibiOS.git
 	branch = master
 [submodule "ChibiOS-Contrib"]
 	path = ChibiOS-Contrib
-	url = https://github.com/ChibiOS/ChibiOS-Contrib
+	url = https://github.com/ChibiOS/ChibiOS-Contrib.git
 	branch = chibios-21.11.x
 [submodule "lvgl"]
 	path = lvgl
 	url = https://github.com/dynfer/lvgl.git
 	branch = pr-chibios
-[submodule "h743bootloader"]
-	path = h743bootloader
+[submodule "h7bootloader"]
+	path = h7bootloader
 	url = https://github.com/dynfer/h7bootloader.git
 	branch = h743

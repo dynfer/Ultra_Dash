@@ -1,15 +1,15 @@
 #!/bin/bash
 
 rm -rf export
-rm -rf .dep && rm -rf build && rm -rf h743bootloader/.dep && rm -rf h743bootloader/build
+rm -rf .dep && rm -rf build && rm -rf h7bootloader/.dep && rm -rf h7bootloader/build
 
-cd h743bootloader
+cd h7bootloader
 make clean && make -j $(nproc)
 cd ..
 make clean && make -j $(nproc)
 
 mkdir export
-cp build/ch.bin export/ && cp h743bootloader/build/h7bl.bin export/
+cp build/ch.bin export/ && cp h7bootloader/build/h7bl.bin export/
 cd export
 
 CRC_HEX=$(python3 -c "import zlib; print(hex(zlib.crc32(open('ch.bin','rb').read()) & 0xffffffff))")
