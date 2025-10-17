@@ -1,0 +1,61 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug H743 fw",
+            "type": "cortex-debug",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/",
+            "executable": "${workspaceFolder}/build/ch.elf",
+            "device": "STM32H743",
+            "svdPath": "${workspaceFolder}/STM32H743.svd",
+            "v1": false,
+            "svdFile": "${workspaceFolder}/STM32H743x.svd",
+            "servertype": "openocd",
+            "configFiles": ["interface/stlink.cfg", "target/stm32h7x.cfg"],
+            "rtos": "auto"
+        },
+        {
+            "name": "Debug H743 fw attach",
+            "type": "cortex-debug",
+            "request": "attach",
+            "cwd": "${workspaceFolder}/",
+            "executable": "${workspaceFolder}/build/ch.elf",
+            "device": "STM32H743",
+            "svdPath": "${workspaceFolder}/STM32H743.svd",
+            "v1": false,
+            "svdFile": "${workspaceFolder}/STM32H743x.svd",
+            "servertype": "openocd",
+            "configFiles": ["interface/stlink.cfg", "target/stm32h7x.cfg"],
+            "rtos": "auto"
+        },
+        {
+            "name": "Debug H743 bl",
+            "type": "cortex-debug",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/",
+            "executable": "${workspaceFolder}/h743bootloader/build/h7bl.elf",
+            "device": "STM32H743",
+            "svdPath": "${workspaceFolder}/STM32H743.svd",
+            "v1": false,
+            "svdFile": "${workspaceFolder}/STM32H743x.svd",
+            "servertype": "openocd",
+            "configFiles": ["interface/stlink.cfg", "target/stm32h7x.cfg"],
+            "rtos": "auto"
+        },
+        {
+            "name": "Debug H743 bl attach",
+            "type": "cortex-debug",
+            "request": "attach",
+            "cwd": "${workspaceFolder}/",
+            "executable": "${workspaceFolder}/h743bootloader/build/h7bl.elf",
+            "device": "STM32H743",
+            "svdPath": "${workspaceFolder}/STM32H743.svd",
+            "v1": false,
+            "svdFile": "${workspaceFolder}/STM32H743x.svd",
+            "servertype": "openocd",
+            "configFiles": ["interface/stlink.cfg", "target/stm32h7x.cfg"],
+            "rtos": "auto"
+        }
+    ]
+}
