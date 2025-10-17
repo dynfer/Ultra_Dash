@@ -1,8 +1,5 @@
 #include "layout.h"
-#include "config_struct.h"
-#include "gauge.h"
-#include "value_bar.h"
-#include <string.h>
+#include "flash/config_struct.h"
 
 static DefaultLayoutStruct defaultLayoutTable;
 

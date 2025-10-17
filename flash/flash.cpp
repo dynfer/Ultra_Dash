@@ -1,6 +1,4 @@
-#include "ch.h"
-#include "hal.h"
-#include "flash.h"
+#include "flash/flash.h"
 
 static void flashWaitWhileBusy()
 {

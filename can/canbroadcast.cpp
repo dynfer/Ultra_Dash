@@ -1,5 +1,5 @@
 #include "canbroadcast.h"
-#include "config_struct.h"
+#include "flash/config_struct.h"
 
 void setSensorValue(CANRxFrame frame, sensorContainer *sensors)
 {

@@ -1,5 +1,5 @@
 #include "can.h"
-#include "can_demo.h"
+#include "util/can_demo.h"
 
 static THD_WORKING_AREA(waCanRxThread, 512);
 static THD_FUNCTION(CanRxThread, p)

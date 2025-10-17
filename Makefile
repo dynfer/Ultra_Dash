@@ -126,27 +126,19 @@ LDSCRIPT= $(BOARDDIR)/STM32H743xI.ld
 # C sources that can be compiled in ARM or THUMB mode depending on the global
 # setting.
 CSRC = $(ALLCSRC) \
-       util/usbcfg.c \
        $(GFXSRC) \
        $(CSRCS)
 
 # C++ sources that can be compiled in ARM or THUMB mode depending on the global
 # setting.
 CPPSRC = $(ALLCPPSRC) \
-         main.cpp \
-         usb_config.cpp \
-         flash.cpp \
-         config.cpp \
-         api.cpp \
-         can.cpp \
-         canbroadcast.cpp \
-         layout.cpp \
-         gauge.cpp \
-         lvgl_thread.cpp \
-         rpm_bar.cpp \
-         value_bar.cpp \
-         util/can_demo.cpp \
-         util/util.cpp
+         main.cpp
+
+include ./widgets/widgets.mk
+include ./util/util.mk
+include ./can/can.mk
+include ./flash/flash.mk
+include ./gfx/gfx.mk
 
 # List ASM source files here.
 ASMSRC = $(ALLASMSRC)

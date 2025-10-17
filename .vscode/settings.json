@@ -101,7 +101,8 @@
         "hal_serial_nor.h": "c",
         "vfs.h": "c",
         "hal_mfs.h": "c",
-        "hal_xsnor_macronix_mx25.h": "c"
+        "hal_xsnor_macronix_mx25.h": "c",
+        "config_struct.h": "c"
     },
     "cortex-debug.variableUseNaturalFormat": true,
     "cmake.ignoreCMakeListsMissing": true,

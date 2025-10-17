@@ -1,10 +1,10 @@
-#ifndef API_H
-#define API_H
+#pragma once
 
 #include "ch.h"
 #include "hal.h"
-#include "config_struct.h"
+#include "flash/config_struct.h"
 #include "util/usbcfg.h"
+#include "string.h"
 
 constexpr uint32_t pack4(uint8_t b0, uint8_t b1, uint8_t b2, uint8_t b3)
 {

@@ -2,9 +2,11 @@
 #include "ch.h"
 #include "hal.h"
 #include "lvgl.h"
-#include "rpm_bar.h"
-#include "value_bar.h"
-#include "canbroadcast.h"
+#include "widgets/rpm_bar.h"
+#include "widgets/value_bar.h"
+#include "can/canbroadcast.h"
+#include "widgets/gauge.h"
+#include <string.h>
 
 enum class LayoutType : uint8_t
 {

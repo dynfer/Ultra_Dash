@@ -6,7 +6,7 @@
 #include "lvgl/lvgl.h"
 #endif
 
-#include "canbroadcast.h"
+#include "can/canbroadcast.h"
 
 #ifdef __cplusplus
 extern "C"

@@ -1,8 +1,4 @@
-#include "ch.h"
-#include "hal.h"
-#include "api.h"
-#include "string.h"
-#include "config_struct.h"
+#include "util/api.h"
 
 static constexpr uint32_t PACKET_SZ = 64;
 static constexpr uint32_t DCACHE_LINE = 32;

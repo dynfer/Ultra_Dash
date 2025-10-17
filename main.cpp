@@ -17,22 +17,20 @@
 #include "hal.h"
 #include "hal_sdram.h"
 #include "hal_sdram_lld.h"
-#include "usb_config.h"
+#include "util/usb_config.h"
 #include "util/sdram.h"
 #include <string.h>
-#include "lvgl_thread.h"
-#include "config_struct.h"
-#include "can.h"
-#include "layout.h"
+#include "gfx/lvgl_thread.h"
+#include "flash/config_struct.h"
+#include "can/can.h"
+#include "gfx/layout.h"
 
 #define VECTOR_TABLE_SIZE ((WAKEUP_PIN_IRQn + 1 + 16) * sizeof(uint32_t))
 
 __attribute__((section(".configbl"), used))
 const uint32_t boot_data_placeholder[2] = { 0xFFFFFFFF, 0xFFFFFFFF };
 
-/*
- * Erases the whole SDRAM bank.
- */
+
 static void sdram_bulk_erase(void)
 {
   memset((uint32_t *)(SDRAM_BANK_ADDR), 0, (uint32_t)(W9825G6KH5_SIZE));
@@ -41,7 +39,7 @@ static void sdram_bulk_erase(void)
 void relocate_vector_to_sram(void)
 {
   memcpy((void *)0x20000000, (void *)0x08020400, VECTOR_TABLE_SIZE);
-  SCB->VTOR = 0x20000000; // must be 128‑byte aligned
+  SCB->VTOR = 0x20000000;
   __DSB();
   __ISB();
 }

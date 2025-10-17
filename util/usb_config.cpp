@@ -1,9 +1,4 @@
-#include "ch.h"
-#include "hal.h"
-#include "hal_serial_usb.h"
-#include "usb_config.h"
-#include "util/usbcfg.h"
-#include "api.h"
+#include "util/usb_config.h"
 
 static THD_WORKING_AREA(waUsbThread, 4096);
 static THD_FUNCTION(UsbThread, arg)

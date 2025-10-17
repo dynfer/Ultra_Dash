@@ -1,11 +1,13 @@
-#ifndef CONFIG_STRUCT_H
-#define CONFIG_STRUCT_H
+#pragma once
 
 #include "ch.h"
 #include "hal.h"
-#include "canbroadcast.h"
-#include "layout.h"
-#include "gauge.h"
+#include "can/canbroadcast.h"
+#include "gfx/layout.h"
+#include <string.h>
+#include "flash/flash.h"
+#include "chprintf.h"
+#include "util/util.h"
 
 typedef struct dashConfig
 {
@@ -33,5 +35,3 @@ extern dashConfig config;
 void config_load(void);
 void config_save(void);
 void load_default(void);
-
-#endif // CONFIG_STRUCT_H

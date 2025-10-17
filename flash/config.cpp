@@ -1,12 +1,4 @@
-#include "ch.h"
-#include "hal.h"
-#include "config_struct.h"
-#include <string.h>
-#include "flash.h"
-#include "chprintf.h"
-#include "gauge.h"
-#include "rpm_bar.h"
-#include "util/util.h"
+#include "flash/config_struct.h"
 
 static const void *start_addr = reinterpret_cast<const void *>(0x081E0000);
 dashConfig config __attribute__((section(".sdram"), aligned(8)));

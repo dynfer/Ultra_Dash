@@ -1,5 +1,5 @@
 #pragma once
 #include <utility>
-#include "canbroadcast.h"
+#include "can/canbroadcast.h"
 
 std::pair<float,float> getMinMax(SensorEnum type);
